@@ -3,9 +3,7 @@ class User
   attr_accessor :credit_card, :subscription
 
   def charge
-    unless subscription.nil?
-      subscription.charge(credit_card)
-    end
+    subscription.charge(credit_card) unless subscription.nil?
   end
 
   def has_mentoring?
@@ -13,6 +11,6 @@ class User
   end
 
   def price
-    subscription.try(:price) || 0
+    (subscription || NoSubscription.new).price
   end
 end
