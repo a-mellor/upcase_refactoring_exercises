@@ -12,4 +12,4 @@ Create a class following the Null Object pattern in order to encapsulate conditi
 5. Repeat step four until the nil cases are fully encapsulated within the Null Object.
 6. Make sure all tests pass by running ```rspec```.
 
-My attempt is in ```my_solution``` branch
+Original code is in  ```starting_code``` branch
